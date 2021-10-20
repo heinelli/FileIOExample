@@ -4,9 +4,13 @@
     End Sub
 
     Sub WriteFile()
-        Dim fileName As String = "ExampleF21.txt"
+        'Absolute path
+        'Dim fileName As String = "C:\Users\ellio\source\repos\FileIOExampleExampleF21.txt"
 
-        FileOpen(1, fileName, OpenMode.Input)
+        'Relative path  ../ means go up a diretory
+        Dim fileName As String = "../../ExampleF21.txt"
+
+        FileOpen(1, fileName, OpenMode.Output)
 
         FileClose(1)
 
